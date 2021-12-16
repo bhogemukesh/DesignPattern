@@ -1,9 +1,11 @@
 package com.mukesh.designpattern.corejava.creational.singleton;
 
+import java.io.Serializable;
+
 /**
  * @author Mukesh Bhoge
  **/
-public class MySingleTone implements  Cloneable {
+public class MySingleTone implements  Cloneable , Serializable {
     private static MySingleTone mySingleTone;
 
     private MySingleTone() {
@@ -17,9 +19,15 @@ public class MySingleTone implements  Cloneable {
         }
         return  mySingleTone;
     }
-
+    // To avoid cloning of object
     @Override
     protected Object clone() throws CloneNotSupportedException {
        throw new CloneNotSupportedException(" !!! Clone not supported !!! ");
+    }
+
+    // To avoid Serialization issue
+    protected Object readResolve()
+    {
+        return mySingleTone;
     }
 }

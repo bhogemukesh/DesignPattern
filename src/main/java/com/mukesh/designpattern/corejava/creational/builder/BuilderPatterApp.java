@@ -1,8 +1,10 @@
-package com.mukesh.designpattern.corejava.builder;
+package com.mukesh.designpattern.corejava.creational.builder;
 
 /**
  * @author Mukesh Bhoge
+ * Type : Core Java Creational Pattern
  * Builder pattern
+ * Problem without Builder pattern : User have to follow sequesnce of input parameters while creating new object
  **/
 public class BuilderPatterApp {
     public static void main(String[] args) {

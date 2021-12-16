@@ -1,4 +1,4 @@
-package com.mukesh.designpattern.corejava.builder;
+package com.mukesh.designpattern.corejava.creational.builder;
 
 /**
  * @author Mukesh Bhoge
